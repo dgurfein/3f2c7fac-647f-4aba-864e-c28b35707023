@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vM3xhxBJffE=",
+  "success": true,
+  "projectFilePath": "C:\\git\\ArrayProcessor\\ArrayProcessor\\ArrayProcessor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\daniella_g\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.6\\microsoft.extensions.dependencyinjection.10.0.6.nupkg.sha512",
+    "C:\\Users\\daniella_g\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.6\\microsoft.extensions.dependencyinjection.abstractions.10.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
