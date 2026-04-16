@@ -51,7 +51,7 @@ ArrayProcessor.exe
 ---
 ## Usage
 
-DataProcessor [-u <UseCaseName>] <input>
+ArrayProcessor [-u <UseCaseName>] <input>
 - `-u <UseCaseKey>` → (optional) the use case to run; if omitted, the default use case is executed.  
 - `-u <UseCaseName>` → (optional) the use case to run; if omitted, the default use case is executed.  
 - `<input>` → the raw input for the use case.
