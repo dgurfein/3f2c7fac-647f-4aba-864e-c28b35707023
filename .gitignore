@@ -21,6 +21,11 @@ temp/
 conf/
 db/
 locks/
+bin/
+obj/
+
+# Environment Specific appsettings (may include sensitive information)
+#appsettings.*.json
 
 # Build results
 [Dd]ebug/
@@ -38,14 +43,11 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
 artifacts/
-
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-**/wwwroot/lib
 
 # NuGet Packages
 *.nupkg
@@ -68,3 +70,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# SQL Server Data Tools (SSDT) artifacts
+*.dbmdl
+*.jfm
+*.jfl
+*.pdb
