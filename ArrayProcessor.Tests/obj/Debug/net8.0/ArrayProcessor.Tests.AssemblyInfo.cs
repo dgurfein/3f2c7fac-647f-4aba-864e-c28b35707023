@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArrayProcessor.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b07f865caf7eee2b06f7775601a133bff3889d46")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArrayProcessor.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArrayProcessor.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

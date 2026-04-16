@@ -16,3 +16,4 @@ C:\git\ArrayProcessor\ArrayProcessor\obj\Debug\net8.0\refint\ArrayProcessor.dll
 C:\git\ArrayProcessor\ArrayProcessor\obj\Debug\net8.0\ArrayProcessor.pdb
 C:\git\ArrayProcessor\ArrayProcessor\obj\Debug\net8.0\ArrayProcessor.genruntimeconfig.cache
 C:\git\ArrayProcessor\ArrayProcessor\obj\Debug\net8.0\ref\ArrayProcessor.dll
+C:\git\ArrayProcessor\ArrayProcessor\obj\Debug\net8.0\ArrayProcessor.sourcelink.json

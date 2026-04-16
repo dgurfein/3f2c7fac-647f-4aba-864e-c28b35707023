@@ -105,3 +105,4 @@ C:\git\ArrayProcessor\ArrayProcessor.Tests\obj\Debug\net8.0\refint\ArrayProcesso
 C:\git\ArrayProcessor\ArrayProcessor.Tests\obj\Debug\net8.0\ArrayProcessor.Tests.pdb
 C:\git\ArrayProcessor\ArrayProcessor.Tests\obj\Debug\net8.0\ArrayProcessor.Tests.genruntimeconfig.cache
 C:\git\ArrayProcessor\ArrayProcessor.Tests\obj\Debug\net8.0\ref\ArrayProcessor.Tests.dll
+C:\git\ArrayProcessor\ArrayProcessor.Tests\obj\Debug\net8.0\ArrayProcessor.Tests.sourcelink.json

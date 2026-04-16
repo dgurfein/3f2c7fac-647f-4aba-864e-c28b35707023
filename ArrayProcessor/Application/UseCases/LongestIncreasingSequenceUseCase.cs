@@ -75,48 +75,7 @@ namespace ArrayProcessor.Application.UseCases
     }
     internal sealed class NumberChainProcessor : IProcessor<LongestIncreasingSequenceRequest, LongestIncreasingSequenceResult>
     {
-        public LongestIncreasingSequenceResult Process1(LongestIncreasingSequenceRequest request)
-        {
-            var nums = request.NumberArray;
-
-            var n = nums.Length;
-            int seqStart = 0;
-            int maxLength = 0;
-            int maxStart = 0;
-            int seqLength = 0;
-            // Loop on array and count longest sequence compare to previous and store most current
-            for (int i = 0; i < n; i++)
-            {
-                // If array first position or value greater than previous increase length.
-                if (i == 0 || nums[i] > nums[i - 1])
-                {
-                    seqLength++; // increase the length
-                }
-                else // increasing sequence stopped at i, so need to restart counting new sequence
-                {
-                    //check if current result is better than the stored max.
-                    if (seqLength > maxLength)
-                    {
-                        maxLength = seqLength;
-                        maxStart = seqStart; //store starting possition of the new max sequence
-                    }
-                    // starting over - set new start point for next chain
-                    seqStart = i;
-                    seqLength = 1; //minimum length is 1 (For first position in the sequence)
-                }
-            }
-            //check last result in case the last array position was the end of the longest sequence
-            if (seqLength > maxLength)
-            {
-                maxLength = seqLength;
-                maxStart = seqStart;
-            }
-            return new LongestIncreasingSequenceResult
-            {
-                // extract a sub array from best result start position to its end (based on length)
-                ResultArray = nums[maxStart..(maxStart + maxLength)]
-            };
-        }
+       
         // alternative recursive approach, not currently used by the program, but included in test cases.
         public LongestIncreasingSequenceResult Process(LongestIncreasingSequenceRequest request)
         {
@@ -129,7 +88,14 @@ namespace ArrayProcessor.Application.UseCases
                 ResultArray = nums[result.Item1..(result.Item1+result.Item2)]
             };
         }
-
+        /// <summary>
+        /// This method returns the longest increasing sequence in an integer array, if 2 found the first one is returned.
+        /// It performs the array scan recursively with sub arrays, so original position from the first call is retained.
+        /// returns a record with the index where the longest array starts (original position) and the length)
+        /// </summary>
+        /// <param name="intArray">the array to scan</param>
+        /// <param name="origPosition">the index of the start position in original array (starting at 0)</param>
+        /// <returns></returns>
         private (int,int) GetLongestIncreasingSeq(int[] intArray, int origPosition)
         {
             //scan the array from position 1 to the end, return the endIndex of the increasing sequence
@@ -143,7 +109,7 @@ namespace ArrayProcessor.Application.UseCases
             }
             // sequence broken before the end, call recursively with remaining array
             var subArray = intArray[endIndex..intArray.Length];
-            // recursevly go to next position
+            // recursevly go to next position, original position is now increased to the next starting point.
             var nextSequence = GetLongestIncreasingSeq(subArray, origPosition+endIndex);
             // Return the better entry from the 2 calls:
             if (nextSequence.Item2 > endIndex)
@@ -153,5 +119,4 @@ namespace ArrayProcessor.Application.UseCases
             return (origPosition, endIndex);
         }
     }
-
 }
