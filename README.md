@@ -4,16 +4,17 @@ A modular .NET 8 command-line Array Processor that supports pluggable use-case
 
 ## Table of Contents
 - [Description](#description)
-- [Architecture](#architecture)
 - [Use Cases](#use-cases)
 - [Installation](#installation)
 - [Usage](#usage)
 
 ---
 ## Description
-- The Array Processor is generic command line tool that receives a use case name and input, it processes the input as per the use case and prints the result.
----
-## Architecture
+- The solution was built as a command line tool (Array processor) so it can be executed as a program.
+- A second approach with a standalone static function is also available, but can only be executed via the test project at this stage.
+- The two approaches using different algorithm:
+- The Array Processor is using a recursive approach where the function is a simple scan of the array from start to end. In practice both are the same, recursive approach a bit more elegant, simple traditional scan is easier to read. Performances expected to be identical.
+- The Array Processor is generic command line tool that receives a use case name and input, it processes the input as per the use case and prints the result. In this case there is a single use case which is the LongestIncreasingSequence.
 - The solution follows SOLID and Clean Architecture principles.
 ---
 ## Use Cases
@@ -21,7 +22,7 @@ A modular .NET 8 command-line Array Processor that supports pluggable use-case
 ### 1. LongestIncreasingSequence
 - **Name:** LongestIncreasingSequence (default)
 - **Description:** Given an array of integers, return the longest incresing sequence sub array within the input array.
-- **Input:** An array of integers number seperated by space (multiple spaces are tolerated, but other non numeric characters considered as error). Array must contain at least one integer
+- **Input:** An array of integers number seperated by space (multiple spaces are tolerated, but other non numeric characters considered as error). Array must contain at least one integer (when executed from command line)
 - **Output:** Return the longest increasing sequence within the array, if more than one found with same length, first one is returned
 - **Examples:**
 
