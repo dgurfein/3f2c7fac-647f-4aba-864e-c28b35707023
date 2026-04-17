@@ -7,6 +7,7 @@ A modular .NET 8 command-line Array Processor that supports pluggable use-case
 - [Use Cases](#use-cases)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Testing](#Testing)
 
 ---
 ## Description
@@ -55,4 +56,7 @@ ArrayProcessor.exe
 ArrayProcessor [-u <UseCaseName>] <input>  
 - `-u <UseCaseName>` → (optional) the use case to run; if omitted, the default use case is executed.  
 - `<input>` → the raw input for the use case.
-
+---
+## Testing
+The solution holds a unit test project ArrayProcessor.Test that executes all provided tests. 
+It can be invoked on a local repository clone with 'dotnet test' 
