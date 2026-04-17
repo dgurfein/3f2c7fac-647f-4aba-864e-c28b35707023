@@ -4,7 +4,6 @@ A modular .NET 8 command-line Array Processor that supports pluggable use-case
 
 ## Table of Contents
 - [Description](#description)
-- [Architecture](#architecture)
 - [Use Cases](#use-cases)
 - [Installation](#installation)
 - [Usage](#usage)
